@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ejes</title>
+	</head>
+	<style>
+		main > div {
+			position: relative;
+			margin-left: 50px;
+			margin-top: 50px;
+		}
+
+		main > div > div {
+			width: 50px;
+			height: 50px;
+			position: absolute;
+		}
+
+		main > div > div:nth-child(1) {
+			background-color: tomato;
+			z-index: 0;
+			margin-left: 10px;
+			margin-top: 10px;
+		}
+		main > div > div:nth-child(2) {
+			background-color: steelblue;
+			z-index: 1;
+		}
+		main > div > div:nth-child(3) {
+			background-color: gray;
+			z-index: 2;
+			margin-left: 20px;
+			margin-top: 20px;
+		}
+	</style>
+	<body>
+		<nav>
+			<a href="/">Regresar</a>
+		</nav>
+		<main>
+			<div class="z">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</main>
+	</body>
+</html>

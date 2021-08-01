@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Style Origin</title>
+	</head>
+	<style>
+		.main {
+			height: 80vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.root {
+			position: relative;
+			height: 200px;
+			width: 200px;
+			border: 5px solid#fb4;
+			perspective: 200px;
+			animation: rotatey;
+			animation-duration: 3s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+		}
+
+		.root > .children {
+			position: absolute;
+			height: 200px;
+			width: 200px;
+			/* border: 1px solid red; */
+			background-color: rgba(68, 102, 255, 0.568);
+			transform-style: preserve-3d;
+			transform: rotateX(45deg);
+		}
+
+		.root > .delay {
+			animation-duration: 3.2s;
+			background-color: rgba(255, 190, 68, 0.322);
+		}
+	</style>
+	<body>
+		<nav>
+			<a href="./index.html">Regresar</a>
+		</nav>
+		<main class="main">
+			<div class="root">
+				<div class="children"></div>
+				<div class="children delay"></div>
+			</div>
+		</main>
+	</body>
+</html>

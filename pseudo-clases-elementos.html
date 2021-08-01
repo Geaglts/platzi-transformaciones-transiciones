@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pseudo Clases</title>
+	</head>
+	<style>
+		fieldset {
+			display: inline-flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 200px;
+			border: none;
+		}
+
+		input {
+			margin-bottom: 10px;
+			border: none;
+			font-size: 12pt;
+			background-color: rgba(106, 90, 205, 0.1);
+			color: slateblue;
+			width: 255px;
+			height: 38px;
+			padding-left: 0.8em;
+			border-radius: 4px;
+		}
+
+		input {
+			outline-color: rgba(106, 90, 205, 0.2);
+		}
+
+		input:hover {
+			background: rgba(106, 90, 205, 0.2);
+		}
+
+		input::placeholder {
+			color: rgba(106, 90, 205, 0.7);
+		}
+
+		input:hover::placeholder {
+			color: white;
+		}
+
+		input:focus {
+			background: rgba(106, 90, 205, 0.1);
+			color: slateblue;
+		}
+
+		input:focus::placeholder {
+			color: rgba(106, 90, 205, 0.7);
+		}
+
+		input:disabled {
+			color: tomato;
+			background-color: rgba(255, 99, 71, 0.1);
+		}
+
+		input:disabled::placeholder {
+			color: rgba(255, 99, 71, 0.7);
+		}
+
+		p::before {
+			content: "HOLAAA!!!!";
+		}
+
+		p::after {
+			content: "ADIOOOS!!!!";
+		}
+
+		p:not(.proivido) {
+			color: rgb(238, 82, 108);
+		}
+	</style>
+	<body>
+		<nav>
+			<a href="/">Regresar</a>
+		</nav>
+		<form action="">
+			<fieldset>
+				<input type="text" placeholder="your name" />
+				<input type="email" placeholder="your email" disabled />
+				<input type="number" placeholder="age" disabled />
+			</fieldset>
+			<fieldset>
+				<input type="text" placeholder="your name" />
+				<input type="email" placeholder="your email" />
+				<input type="number" placeholder="age" />
+			</fieldset>
+		</form>
+		<div>
+			<p>Uno</p>
+			<p class="proivido">Dos</p>
+			<p>Tres</p>
+		</div>
+	</body>
+</html>
